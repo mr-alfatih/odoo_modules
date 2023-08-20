@@ -7,7 +7,7 @@ class ImportCustomerWizard(models.Model):
     _name = "import.customer.wizard"
     file = fields.Binary(string="File", required=True)
     file_name = fields.Char(string="File Path", required=True)
-    ic_ids = fields.One2many('import.customer', 'ic_id')
+    ic_ids = fields.One2many('import.customer','ic_id')
 
     # def import_customer(self):
     #     try:
@@ -73,15 +73,6 @@ class ImportCustomerWizard(models.Model):
                             vals = self._create_journal_entry(row_values)
                             line_vals.append((0, 0, vals))
                 if line_vals:
-                    self.ic_ids = line_vals
-                    print('line_vals')
-                    print(line_vals)
-                    # search_var = self.browse(self.id)
-                    # search_var.update({
-                    #     'ic_ids': [(0, 0, line_vals)]
-                    # })
-                    # self.write({'ic_ids': (0, 0, line_vals)})
-                    # self.write({'ic_ids': [(0,0, line_vals)]})
                     for re in line_vals:
                         print(re)
                     # date = self.date
@@ -94,7 +85,6 @@ class ImportCustomerWizard(models.Model):
                     # })
             except IndexError:
                 pass
-
 
 class ImportCustomerWizard(models.Model):
     _name = "import.customer"

@@ -18,16 +18,16 @@
                                 <field name="desc"/>
                                 <field name="price"/>
                             </tree>
-                            <!--                            <form>-->
-                            <!--                                <group>-->
-                            <!--                                    <group>-->
-                            <!--                                        <field name="desc"/>-->
-                            <!--                                    </group>-->
-                            <!--                                    <group>-->
-                            <!--                                        <field name="price"/>-->
-                            <!--                                    </group>-->
-                            <!--                                </group>-->
-                            <!--                            </form>-->
+<!--                            <form>-->
+<!--                                <group>-->
+<!--                                    <group>-->
+<!--                                        <field name="desc"/>-->
+<!--                                    </group>-->
+<!--                                    <group>-->
+<!--                                        <field name="price"/>-->
+<!--                                    </group>-->
+<!--                                </group>-->
+<!--                            </form>-->
                         </field>
                     </page>
                 </notebook>
@@ -42,19 +42,12 @@
             </form>
         </field>
     </record>
-<!--    <record id="import_customer_action" model="ir.actions.act_window">-->
-<!--        <field name="name">Import Customer</field>-->
-<!--        <field name="res_model">import.customer.wizard</field>-->
-<!--        <field name="view_mode">form</field>-->
-<!--        <field name="view_id" ref="import_customer_wizard"/>-->
-<!--        <field name="target">new</field>-->
-<!--    </record>-->
-
     <record id="import_customer_action" model="ir.actions.act_window">
         <field name="name">Import Customer</field>
         <field name="res_model">import.customer.wizard</field>
         <field name="view_mode">form</field>
-        <field name="target">current</field>
+        <field name="view_id" ref="import_customer_wizard"/>
+        <field name="target">new</field>
     </record>
 
     <menuitem id="customer_import_menu"
