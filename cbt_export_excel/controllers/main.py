@@ -53,6 +53,8 @@ class InvoiceExcelReportController(http.Controller):
             sheet.set_row(row, 20)
             if line['d_type'] == 'line_section':
                 sheet.merge_range(f'A{row+1}:E{row+1}', ' ', title_style)
+            if line['d_type'] == 'line_note':
+                sheet.merge_range(f'A{row + 1}:E{row + 1}', ' ', title_style)
                 # sheet.merge_range(row, 0, line['description'], text_style)
             # sheet.write(row, 0, number, text_style)
             # sheet.write(row, 1, line['description'], text_style)
