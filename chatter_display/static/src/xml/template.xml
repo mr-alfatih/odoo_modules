@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="chatter_display.ToggleChatterBox">
+        <div class="o-dropdown dropdown o_debug_manager o-dropdown--no-caret">
+          <button class="dropdown-toggle o-dropdown--narrow" tabindex="0" aria-expanded="false">
+            <i class="fa fa-outdent"></i>
+          </button>
+        </div>
+    </t>
+</templates>
